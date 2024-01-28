@@ -35,10 +35,6 @@
             this.txtNumAnte1 = new System.Windows.Forms.TextBox();
             this.btnAdivinar = new System.Windows.Forms.Button();
             this.btnReiniciar = new System.Windows.Forms.Button();
-            this.txtNumAnte5 = new System.Windows.Forms.TextBox();
-            this.txtNumAnte4 = new System.Windows.Forms.TextBox();
-            this.txtNumAnte3 = new System.Windows.Forms.TextBox();
-            this.txtNumAnte2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtNumUsuario
@@ -81,9 +77,9 @@
             this.txtNumAnte1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumAnte1.Font = new System.Drawing.Font("Century", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumAnte1.ForeColor = System.Drawing.Color.Transparent;
-            this.txtNumAnte1.Location = new System.Drawing.Point(118, 236);
+            this.txtNumAnte1.Location = new System.Drawing.Point(154, 239);
             this.txtNumAnte1.Name = "txtNumAnte1";
-            this.txtNumAnte1.Size = new System.Drawing.Size(63, 35);
+            this.txtNumAnte1.Size = new System.Drawing.Size(270, 35);
             this.txtNumAnte1.TabIndex = 3;
             // 
             // btnAdivinar
@@ -117,51 +113,6 @@
             this.btnReiniciar.UseVisualStyleBackColor = false;
             this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
-            // txtNumAnte5
-            // 
-            this.txtNumAnte5.BackColor = System.Drawing.Color.Black;
-            this.txtNumAnte5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumAnte5.Font = new System.Drawing.Font("Century", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumAnte5.ForeColor = System.Drawing.Color.Transparent;
-            this.txtNumAnte5.Location = new System.Drawing.Point(394, 236);
-            this.txtNumAnte5.Name = "txtNumAnte5";
-            this.txtNumAnte5.Size = new System.Drawing.Size(63, 35);
-            this.txtNumAnte5.TabIndex = 6;
-            // 
-            // txtNumAnte4
-            // 
-            this.txtNumAnte4.BackColor = System.Drawing.Color.Black;
-            this.txtNumAnte4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumAnte4.Font = new System.Drawing.Font("Century", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumAnte4.ForeColor = System.Drawing.Color.Transparent;
-            this.txtNumAnte4.Location = new System.Drawing.Point(325, 236);
-            this.txtNumAnte4.Name = "txtNumAnte4";
-            this.txtNumAnte4.Size = new System.Drawing.Size(63, 35);
-            this.txtNumAnte4.TabIndex = 7;
-            // 
-            // txtNumAnte3
-            // 
-            this.txtNumAnte3.BackColor = System.Drawing.Color.Black;
-            this.txtNumAnte3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumAnte3.Font = new System.Drawing.Font("Century", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumAnte3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtNumAnte3.Location = new System.Drawing.Point(256, 236);
-            this.txtNumAnte3.Name = "txtNumAnte3";
-            this.txtNumAnte3.Size = new System.Drawing.Size(63, 35);
-            this.txtNumAnte3.TabIndex = 8;
-            // 
-            // txtNumAnte2
-            // 
-            this.txtNumAnte2.BackColor = System.Drawing.Color.Black;
-            this.txtNumAnte2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumAnte2.Font = new System.Drawing.Font("Century", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumAnte2.ForeColor = System.Drawing.Color.Transparent;
-            this.txtNumAnte2.Location = new System.Drawing.Point(187, 236);
-            this.txtNumAnte2.Name = "txtNumAnte2";
-            this.txtNumAnte2.Size = new System.Drawing.Size(63, 35);
-            this.txtNumAnte2.TabIndex = 9;
-            this.txtNumAnte2.Text = "\r\n";
-            // 
             // formJuego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,10 +121,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(571, 359);
-            this.Controls.Add(this.txtNumAnte2);
-            this.Controls.Add(this.txtNumAnte3);
-            this.Controls.Add(this.txtNumAnte4);
-            this.Controls.Add(this.txtNumAnte5);
             this.Controls.Add(this.btnReiniciar);
             this.Controls.Add(this.btnAdivinar);
             this.Controls.Add(this.txtNumAnte1);
@@ -196,10 +143,6 @@
         private System.Windows.Forms.TextBox txtNumAnte1;
         private System.Windows.Forms.Button btnAdivinar;
         private System.Windows.Forms.Button btnReiniciar;
-        private System.Windows.Forms.TextBox txtNumAnte5;
-        private System.Windows.Forms.TextBox txtNumAnte4;
-        private System.Windows.Forms.TextBox txtNumAnte3;
-        private System.Windows.Forms.TextBox txtNumAnte2;
     }
 }
 

@@ -12,9 +12,13 @@ namespace juego_adivinar_numero_forms
 {
     public partial class formJuego : Form
     {
+        public int numRandom = 0;
+        public Random rng = new Random();
+        public int num = 1;
         public formJuego()
         {
             InitializeComponent();
+            numRandom = rng.Next(1, 100);
 
         }
 
@@ -30,18 +34,17 @@ namespace juego_adivinar_numero_forms
         {
             int numUsuario = 0;
             bool bandera = true;
-            Random rng = new Random();
-            int numRandom = rng.Next(1, 100);
-
+            
 
             try
             {
                 do
                 {
+                    
                     numUsuario = Convert.ToInt32(txtNumUsuario.Text);
-                    if (txtNumAnte1.Text == null && numUsuario != numRandom)
+                    if (txtNumAnte1.Text != null && numUsuario != numRandom && num <= 5)
                     {
-                        txtNumAnte1.Text = numUsuario.ToString();
+                        txtNumAnte1.Text = txtNumAnte1.Text + " " + numUsuario.ToString();
                         txtNumUsuario.Text = null;
                         if (numUsuario < numRandom)
                         {
@@ -51,63 +54,6 @@ namespace juego_adivinar_numero_forms
                         {
                             MessageBox.Show("Te pasaste!!");
                         }
-                        bandera = false;
-                    }
-                    else if (txtNumAnte2.Text == null && numUsuario != numRandom)
-                    {
-                        txtNumAnte2.Text = numUsuario.ToString();
-                        txtNumUsuario.Text = null;
-                        if (numUsuario < numRandom)
-                        {
-                            MessageBox.Show("Te faltó!!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Te pasaste!!");
-                        }
-                        bandera = false;
-                    }
-                    else if (txtNumAnte3.Text == null && numUsuario != numRandom)
-                    {
-                        txtNumAnte3.Text = numUsuario.ToString();
-                        txtNumUsuario.Text = null;
-                        if (numUsuario < numRandom)
-                        {
-                            MessageBox.Show("Te faltó!!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Te pasaste!!");
-                        }
-                        bandera = false;
-                    }
-                    else if (txtNumAnte4.Text == null && numUsuario != numRandom)
-                    {
-                        txtNumAnte4.Text = numUsuario.ToString();
-                        txtNumUsuario.Text = null;
-                        if (numUsuario < numRandom)
-                        {
-                            MessageBox.Show("Te faltó!!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Te pasaste!!");
-                        }
-                        bandera = false;
-                    }
-                    else if (txtNumAnte5.Text == null && numUsuario != numRandom)
-                    {
-                        txtNumAnte5.Text = numUsuario.ToString();
-                        txtNumUsuario.Text = null;
-                        if (numUsuario < numRandom)
-                        {
-                            MessageBox.Show("Te faltó!!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Te pasaste!!");
-                        }
-                        bandera = false;
                     }
                     else if (numUsuario == numRandom)
                     {
@@ -117,10 +63,13 @@ namespace juego_adivinar_numero_forms
                     }
                     else
                     {
+                        MessageBox.Show("Se te acabaron los intentos!! reiniciando minijuego");
+                        txtNumUsuario.Text = null;
+                        txtNumAnte1.Text = null;
                         bandera = false;
                     }
+                    num++;
                     bandera = false;
-
                 } while (bandera == true);
             }
             catch (System.NullReferenceException)
@@ -137,10 +86,6 @@ namespace juego_adivinar_numero_forms
         public void reiniciar ()
         {
             txtNumUsuario.Text = null;
-            txtNumAnte5.Text = null;
-            txtNumAnte4.Text = null;
-            txtNumAnte3.Text = null;
-            txtNumAnte2.Text = null;
             txtNumAnte1.Text = null;
 
             MessageBox.Show("la partida se reiniciara, buena suerte!!");
